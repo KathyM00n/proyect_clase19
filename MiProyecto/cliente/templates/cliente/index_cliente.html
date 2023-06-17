@@ -6,6 +6,16 @@
     <title>Document</title>
 </head>
 <body>
-    CLIENTES
+    <h1>CLIENTES</h1>
+    {% for cliente in clientes %}
+       <h1>{{cliente.nombre}}</h1>
+       <p>{{cliente.apellido}}</p>
+       <p>{{cliente.nacimiento}}</p>
+       <p>{{cliente.pais_origen_id}}</p>
+    {% endfor %}
+    <h1>CLIENTES</h1>
+
+    <a href="{% url 'index' %}"> Ir a menú principal </a>
+    
 </body>
 </html>

@@ -1,7 +1,9 @@
 from django.shortcuts import render
+from .models import Cliente
 
-app_name = "Clientes"
 # Create your views here.
 def index(request):
-    return render(request, "cliente/index_cliente.html")
+    clientes = Cliente.objects.all()
+    datos = {"clientes" : clientes}
+    return render(request, "cliente/index_cliente.html", datos)
 
